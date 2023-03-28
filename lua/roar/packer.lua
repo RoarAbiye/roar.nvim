@@ -8,6 +8,10 @@ return require('packer').startup(function(use)
     requires = { { 'nvim-lua/plenary.nvim' } }
   }
 
+  use 'nvim-lua/popup.nvim'
+  use 'nvim-telescope/telescope-media-files.nvim'
+
+
   use({
     'rose-pine/neovim',
     as = 'rose-pine',
@@ -16,10 +20,10 @@ return require('packer').startup(function(use)
     end
   })
 
-  use({
+  use {
     'nvim-treesitter/nvim-treesitter',
-    { run = ':TSUpdate' }
-  })
+    run = ':TSUpdate'
+  }
 
   use('mbbill/undotree')
 
@@ -64,4 +68,13 @@ return require('packer').startup(function(use)
   use { 'toppair/peek.nvim', run = 'deno task --quiet build:fast' }
 
   use { 'nvim-neorg/neorg' }
+
+  use {'RRethy/vim-hexokinase'}
+
+  use { "jiangmiao/auto-pairs"  }
+  use {'WIttyJudge/gruvbox-material.nvim'}
+  use 'nvim-tree/nvim-tree.lua'
+  use 'j-hui/fidget.nvim'
+  use 'Mofiqul/dracula.nvim'
+  use 'nvim-neo-tree/neo-tree.nvim'
 end)
