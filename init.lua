@@ -1,6 +1,7 @@
-require("roar.remap")
-require("roar.packer")
-require("roar.set")
+require("roar")
+-- require("roar.remap")
+-- require("roar.packer")
+-- require("roar.set")
 
 
 -- disable netrw at the very start of your init.lua (strongly advised)
