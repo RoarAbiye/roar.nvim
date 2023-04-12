@@ -85,4 +85,10 @@ return require('packer').startup(function(use)
       "MunifTanjim/nui.nvim",
     }
   }
+
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  }
+  use '/prettier/vim-prettier'
 end)
