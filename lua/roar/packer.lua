@@ -67,11 +67,11 @@ return require('packer').startup(function(use)
   --productivity plugins
   use { 'toppair/peek.nvim', run = 'deno task --quiet build:fast' }
 
-  use { 'nvim-neorg/neorg' }
+  -- use { 'nvim-neorg/neorg' }
 
   use {'RRethy/vim-hexokinase'}
 
-  use { "jiangmiao/auto-pairs"  }
+  -- use { "jiangmiao/auto-pairs"  }
   use {'WIttyJudge/gruvbox-material.nvim'}
   use 'nvim-tree/nvim-tree.lua'
   use 'j-hui/fidget.nvim'
@@ -85,10 +85,14 @@ return require('packer').startup(function(use)
       "MunifTanjim/nui.nvim",
     }
   }
+use {
+    "windwp/nvim-autopairs",
+        config = function() require("nvim-autopairs").setup {} end
+      }
 
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
-  use '/prettier/vim-prettier'
+  use 'prettier/vim-prettier'
 end)
