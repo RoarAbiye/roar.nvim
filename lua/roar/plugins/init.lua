@@ -115,17 +115,17 @@ require('lazy').setup({
 		dependencies = { 'nvim-tree/nvim-web-devicons', opt = true }
 	},
 
-	{
-		-- Add indentation guides even on blank lines
-		'lukas-reineke/indent-blankline.nvim',
-		-- Enable `lukas-reineke/indent-blankline.nvim`
-		-- See `:help indent_blankline.txt`
-		opts = {
-			space_char_blankline = " ",
-			show_current_context = true,
-			show_current_context_start = true,
-		},
-	},
+	-- {
+	-- 	-- Add indentation guides even on blank lines
+	-- 	'lukas-reineke/indent-blankline.nvim',
+	-- 	-- Enable `lukas-reineke/indent-blankline.nvim`
+	-- 	-- See `:help indent_blankline.txt`
+	-- 	opts = {
+	-- 		space_char_blankline = " ",
+	-- 		show_current_context = true,
+	-- 		show_current_context_start = true,
+	-- 	},
+	-- },
 
 	-- "gc" to comment visual regions/lines
 	{ 'numToStr/Comment.nvim',               opts = {} },
@@ -159,17 +159,21 @@ require('lazy').setup({
 		},
 		build = ':TSUpdate',
 	},
-
 	{
-		"echasnovski/mini.pairs",
-		opts = {}
+		'windwp/nvim-autopairs',
+		event = "InsertEnter",
+		opts = {} -- this is equalent to setup({}) function
 	},
 	-- {
-	-- 	"echasnovski/mini.indentscope",
-	-- 	opts = {
-	-- 		symbol = "│"
-	-- 	}
+	-- 	-- "echasnovski/mini.pairs",
+	-- 	-- opts = {}
 	-- },
+	{
+		"echasnovski/mini.indentscope",
+		opts = {
+			symbol = "│"
+		}
+	},
 	{ "lukas-reineke/indent-blankline.nvim", opts = {} },
 	{
 		"echasnovski/mini.move",
